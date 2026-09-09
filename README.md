@@ -1,9 +1,5 @@
 # 📊 JaneStreet-lite
 
-[![Language: OCaml](https://shields.io)](https://ocaml.org)
-[![Build System: Dune](https://shields.io)](https://dune.build)
-[![License: MIT](https://shields.io)](LICENSE)
-
 A high-frequency trading (HFT) infrastructure prototype and backtesting environment built entirely from scratch in **OCaml**. 
 
 This repository replicates the core architectural layers of an institutional market maker—featuring a deterministic continuous double-auction order book, an atomic pre-trade risk engine, real-time arbitrage detection, and a historical tick simulator. By leveraging OCaml's strong type system and functional paradigms, the architecture minimizes runtime garbage collection overhead and guarantees strict execution invariants.
