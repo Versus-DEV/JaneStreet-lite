@@ -1,0 +1,22 @@
+(library
+ (name order_book_lib)
+ (modules order_book)
+ (libraries core))
+
+(executable
+ (name trading_system)
+ (modules arbitrage risk_manager trading_system)
+ (preprocess (pps ppx_deriving_yojson))
+ (libraries core async yojson order_book_lib))
+
+(executable
+ (name compile_hardware)
+ (modules hardware_signal compile_hardware)
+ (preprocess (pps ppx_hardcaml))
+ (libraries core hardcaml))
+
+(executable
+ (name backtester)
+ (modules arbitrage backtester)
+ (libraries core async order_book_lib))
+
